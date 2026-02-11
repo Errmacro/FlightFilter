@@ -7,7 +7,10 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
- * Фильтр-негатор.
+ * Фильтр-негативатор, выполняющий логическое отрицание
+ * результата исходного фильтра.
+ *
+ * <p>Позволяет инвертировать любое правило фильтрации.
  */
 public class NotFlightFilter implements FlightFilter {
 

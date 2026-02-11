@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
+/**
+ * Представляет атомарный сегмент перелёта - перевозку из одной точки в другую.
+ * Сегмент характеризуется датой/временем вылета и датой/временем прилёта.
+ * Объект Segment является неизменяемым (immutable).
+ */
 public class Segment {
     private final LocalDateTime departureDate;
     private final LocalDateTime arrivalDate;

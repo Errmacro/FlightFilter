@@ -9,6 +9,14 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Фильтр, исключающий перелёты, у которых хотя бы один сегмент имеет вылет в прошлом.
+ *
+ * <p>Перелёт считается валидным, если дата вылета каждого сегмента НЕ раньше
+ * текущего момента времени (now). Сегменты с вылетом ровно в момент now считаются валидными.
+ *
+ * <p>Фильтр поддерживает инъекцию Clock для возможности фиксации времени в тестах.
+ */
 public class DepartureBeforeNowFilter implements FlightFilter {
 
     private final Clock clock;

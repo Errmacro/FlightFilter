@@ -3,6 +3,11 @@ package com.gridnine.testing;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Представляет перелёт, состоящий из одного или нескольких сегментов.
+ * Перелёт может быть как прямым (один сегмент), так и с пересадками (несколько сегментов).
+ * Объект Flight является неизменяемым (immutable).
+ */
 public class Flight {
     private final List<Segment> segments;
 

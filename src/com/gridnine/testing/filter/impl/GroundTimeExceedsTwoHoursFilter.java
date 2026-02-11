@@ -9,7 +9,16 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-
+/**
+ * Фильтр, исключающий перелёты, у которых общее время на земле
+ * превышает заданный лимит (по умолчанию 120 минут).
+ *
+ * <p>Время на земле считается как сумма интервалов между прилётом
+ * текущего сегмента и вылетом следующего за ним.
+ *
+ * <p>Перелёты с одним сегментом всегда проходят фильтр,
+ * так как не имеют времени на земле.
+ */
 public class GroundTimeExceedsTwoHoursFilter implements FlightFilter {
     private final int maxGroundMinutes;
     public static final int DEFAULT_MAX_MINUTES = 120;

@@ -7,6 +7,13 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Фильтр, исключающий перелёты с некорректными сегментами,
+ * где дата прилёта раньше даты вылета.
+ *
+ * <p>Перелёт считается валидным, если в каждом его сегменте
+ * прилёт происходит после вылета (или одновременно - в зависимости от требования).
+ */
 public class ArrivalBeforeDepartureFilter implements FlightFilter {
 
     @Override

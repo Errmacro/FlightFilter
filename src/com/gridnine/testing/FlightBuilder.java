@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Утилитный класс для создания тестовых наборов перелётов.
+ * Содержит фабричные методы для генерации предопределённых сценариев,
+ * используемых в демонстрационных целях и модульном тестировании.
+ */
 public class FlightBuilder {
     public static List<Flight> createFlights() {
         LocalDateTime threeDaysFromNow = LocalDateTime.now().plusDays(3);

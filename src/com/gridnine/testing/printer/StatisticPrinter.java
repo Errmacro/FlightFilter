@@ -5,6 +5,14 @@ import com.gridnine.testing.Flight;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Утилитный класс для вывода статистики фильтрации.
+ *
+ * <p>Рассчитывает количество и процент исключённых перелётов
+ * для каждого применённого фильтра, а также итоговые показатели.
+ *
+ * <p>Использует {@link FlightPrinter} для форматирования заголовков.
+ */
 public class StatisticPrinter {
     private final FlightPrinter flightPrinter;
 

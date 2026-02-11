@@ -10,8 +10,16 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 /**
- * Фабрика для динамического создания фильтров.
- * Позволяет регистрировать новые фильтры без изменения существующего кода.
+ * Фабрика для динамического создания фильтров по их типу.
+ *
+ * <p>Реализует паттерн "Фабричный метод" и поддерживает
+ * регистрацию новых типов фильтров без изменения существующего кода.
+ *
+ * <p>Пример использования:
+ * <pre>
+ * FlightFilter filter = FilterFactory.createFilter(FilterType.DEPARTURE_BEFORE_NOW);
+ * FlightFilter custom = FilterFactory.createFilter(FilterType.GROUND_TIME_EXCEEDS, 90);
+ * </pre>
  */
 public class FilterFactory {
 

@@ -7,6 +7,17 @@ import java.time.Duration;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/**
+ * Утилитный класс для форматированного вывода информации о перелётах.
+ *
+ * <p>Поддерживает два режима:
+ * <ul>
+ *   <li>Детальный - с отображением каждого сегмента и времени стыковок</li>
+ *   <li>Краткий - только сводная информация</li>
+ * </ul>
+ *
+ * <p>Все методы выводят данные в {@link System#out}.
+ */
 public class FlightPrinter {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private static final DateTimeFormatter ISO_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
