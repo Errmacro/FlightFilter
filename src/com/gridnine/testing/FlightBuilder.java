@@ -28,7 +28,7 @@ public class FlightBuilder {
         );
     }
 
-    private static Flight createFlight(final LocalDateTime... dates) {
+    public static Flight createFlight(final LocalDateTime... dates) {
         if (dates == null) {
             return new Flight(List.of()); // Пустой перелёт
         }
