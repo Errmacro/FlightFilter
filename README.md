@@ -11,6 +11,8 @@ FlightFilter - система-модуль для фильтрации набо�
 
 ## 🛠 Стек технологий
 - Java 17
+- JUnit5.8.1
+ 
 
 ## 🗂 Структура проекта
 com.gridnine.testing
@@ -59,10 +61,16 @@ com.gridnine.testing
                     
                     │
                     
-                    └── printer/
+                    ├── printer/
                     
                         ├── FlightPrinter.java
                         
                         └── StatisticPrinter.java
+                        
+                    └── tests/
+                    
+                        └── MainTests.java
+                        
+                        
     
 
